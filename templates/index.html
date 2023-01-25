@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Employee Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-dark bg-primary d-flex justify-content-center">
+        <a class="navbar-brand" href="#!">Employee Recommendation System based on Skill set</a>
+    </nav>  
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div style="margin-top: 20px;" class="col-lg-6">
+                <h1 style="padding: .375rem .375rem;">Enter Your Requirements</h1>
+                <form action = "http://localhost:5000/" method = "POST">
+                    <div style="padding: .375rem .375rem;"  class="form-group">
+                        <label for="candidate"><b>Number of Candidates (1 to 6)</b></label>
+                        <input id="candidate" name="candidate" min="1" max="6" type="number" class="form-control">
+                    </div>                                  
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Basic Data Manipulation">Basic Data Manipulation</label>
+                        <input name="Basic Data Manipulation" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Advanced ETL">Advanced ETL</label>
+                        <input name="Advanced ETL" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Architecture">Data Architecture</label>
+                        <input name="Data Architecture" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Modelling and Design">Data Modelling and Design</label>
+                        <input name="Data Modelling and Design" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Storage and Operations">Data Storage and Operations</label>
+                        <input name="Data Storage and Operations" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Security">Data Security</label>
+                        <input name="Data Security" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Reference and Master Data Management">Reference and Master Data Management</label>
+                        <input name="Reference and Master Data Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Document and Content Management">Document and Content Management</label>
+                        <input name="Document and Content Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Governance">Data Governance</label>
+                        <input name="Data Governance" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Quality Management">Data Quality Management</label>
+                        <input name="Data Quality Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Metadata Management">Metadata Management</label>
+                        <input name="Metadata Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Developing a Data Strategy">Developing a Data Strategy</label>
+                        <input name="Developing a Data Strategy" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Exploratory Analysis">Exploratory Analysis</label>
+                        <input name="Exploratory Analysis" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Statistical Testing">Statistical Testing</label>
+                        <input name="Statistical Testing" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Data Visualisation">Data Visualisation</label>
+                        <input name="Data Visualisation" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Report Design and Development">Report Design and Development</label>
+                        <input name="Report Design and Development" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Predictive Analytics">Predictive Analytics</label>
+                        <input name="Predictive Analytics" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="java">Java</label>
+                        <input name="java" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Unsupervised Learning">Unsupervised Learning</label>
+                        <input name="Unsupervised Learning" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Forecasting">Forecasting</label>
+                        <input name="Forecasting" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Developing an Analytics Strategy">Developing an Analytics Strategy</label>
+                        <input name="Developing an Analytics Strategy" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SQL Server">SQL Server</label>
+                        <input name="SQL Server" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Oracle">Oracle</label>
+                        <input name="Oracle" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="MySQL">MySQL</label>
+                        <input name="MySQL" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Postgres">Postgres</label>
+                        <input name="Postgres" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Marklogic">Marklogic</label>
+                        <input name="Marklogic" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="CosmosDB">CosmosDB</label>
+                        <input name="CosmosDB" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SQL Data Warehouse">SQL Data Warehouse</label>
+                        <input name="SQL Data Warehouse" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Redshift">Redshift</label>
+                        <input name="Redshift" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Snowflake">Snowflake</label>
+                        <input name="Snowflake" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Azure">Azure</label>
+                        <input name="Azure" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="AWS">AWS</label>
+                        <input name="AWS" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Google Cloud Platform">Google Cloud Platform</label>
+                        <input name="Google Cloud Platform" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="T-SQL">T-SQL</label>
+                        <input name="T-SQL" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="PL/SQL">PL/SQL</label>
+                        <input name="PL/SQL" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="R">R</label>
+                        <input name="R" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Python">Python</label>
+                        <input name="Python" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Java">Java</label>
+                        <input name="Java" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="XQuery">XQuery</label>
+                        <input name="XQuery" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SPARQL">SPARQL</label>
+                        <input name="SPARQL" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for=".NET">.NET</label>
+                        <input name=".NET" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="CSS/HTML">CSS/HTML</label>
+                        <input name="CSS/HTML" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Power BI">Power BI</label>
+                        <input name="Power BI" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Tableau">Tableau</label>
+                        <input name="Tableau" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Qlikview">Qlikview</label>
+                        <input name="Qlikview" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SSIS">SSIS</label>
+                        <input name="SSIS" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SSRS">SSRS</label>
+                        <input name="SSRS" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="SSAS">SSAS</label>
+                        <input name="SSAS" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Azure Data Factory">Azure Data Factory</label>
+                        <input name="Azure Data Factory" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Azure Databricks">Azure Databricks</label>
+                        <input name="Azure Databricks" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Alteryx">Alteryx</label>
+                        <input name="Alteryx" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Apache Nifi">Apache Nifi</label>
+                        <input name="Apache Nifi" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Business Objects Data Services">Business Objects Data Services</label>
+                        <input name="Business Objects Data Services" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Banking and Finance">Banking and Finance</label>
+                        <input name="Banking and Finance" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Energy and Resources">Energy and Resources</label>
+                        <input name="Energy and Resources" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Utilities">Utilities</label>
+                        <input name="Utilities" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Education">Education</label>
+                        <input name="Education" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Health">Health</label>
+                        <input name="Health" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Defence">Defence</label>
+                        <input name="Defence" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Other Government">Other Government</label>
+                        <input name="Other Government" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Project Management">Project Management</label>
+                        <input name="Project Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Agile">Agile</label>
+                        <input name="Agile" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Waterfall">Waterfall</label>
+                        <input name="Waterfall" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Presentation Skills">Presentation Skills</label>
+                        <input name="Presentation Skills" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="C-Level Communication/Meetings">C-Level Communication/Meetings</label>
+                        <input name="C-Level Communication/Meetings" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Team Management">Team Management</label>
+                        <input name="Team Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <label for="Stakeholder Management">Stakeholder Management</label>
+                        <input name="Stakeholder Management" min="1" max="5" type="number" class="form-control">
+                    </div>
+                    <div style="padding: .375rem .375rem;" class="form-group">
+                        <button style="padding: .375rem .375rem;" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div style="margin-top: 20px;" class="col-lg-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for key,value in result %}
+                        <tr>
+                            <th class="nr" scope="row">1</th>
+                            <td>{{value}}</td>
+                            <td>{{key}}</td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div style="margin-top: 20px;" class="alert alert-danger" role="alert">
+            <strong>Note: </strong>
+            <br>
+            *Enter the requirements rated on the scale of 1 to 5 and are true integers.
+            <br>
+            *This model uses Euclidian Distance score to recommand employee or teams.
+            <br>
+            *Default value for a skill is 1.
+        </div>          
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var a = document.getElementsByClassName("nr");
+    for (var i = 0; i < a.length; i++) {
+        a[i].innerHTML = (i+1)+".";
+    }
+</script>
+
+</html>
